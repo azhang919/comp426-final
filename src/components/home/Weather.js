@@ -37,7 +37,7 @@ const Weather = () => {
 
   return (
     <>
-      <Card>
+      <Card className="mb-5">
         <Card.Body className="text-center justify-content-center">
           <img
             src={`https://www.weatherbit.io/static/img/icons/${weather.icon}.png`}
@@ -48,10 +48,7 @@ const Weather = () => {
           <p>{weather.temp}° F</p>
         </Card.Body>
         <Card.Footer>
-          <p>Data from Raleigh, NC.</p>
-          <p>
-            <em>Weather updates automatically occur every 5 min.</em>
-          </p>
+          <em>Data from Raleigh, NC. Weather updates automatically occur every 5 min.</em>
         </Card.Footer>
       </Card>
     </>

@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <Container
-      className="d-flex justify-content-center align-items-center"
+      className="d-flex justify-content-center"
       style={{ minHeight: "100vh"}}
     >
       <div>
@@ -24,18 +24,22 @@ function App() {
                 className="w-100"
                 style={{ width: "100vw"}}
               />
-              <Route
-                path="/signup"
-                component={Signup}
-                className="d-flex align-self-center w-100"
-                style={{ maxWidth: "400px" }}
-              />
-              <Route
-                path="/login"
-                component={Login}
-                className="d-flex align-self-center w-100"
-                style={{ maxWidth: "400px" }}
-              />
+              <div className="d-flex justify-content-center">
+                <Route
+                  path="/signup"
+                  component={Signup}
+                  className="d-flex w-100"
+                  style={{ maxWidth: "400px" }}
+                />
+              </div>
+              <div className="d-flex justify-content-center">
+                <Route
+                  path="/login"
+                  component={Login}
+                  className="d-flex w-100"
+                  style={{ maxWidth: "400px" }}
+                />
+              </div>
             </Switch>
           </AuthProvider>
         </Router>
