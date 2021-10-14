@@ -102,10 +102,10 @@ const Game = () => {
         </Card>
       ) : (
         <>
-          <Form id="quiz" onSubmit={handleSubmit}>
+          <Form id="quiz" onSubmit={handleSubmit} style={{ textAlign: "left" }}>
             {quiz.map((item, i) => (
-              <Form.Group key={i}>
-                <Form.Label>{item.question}</Form.Label>
+              <Form.Group key={i} style={{ marginBottom: "20px"}}>
+                <Form.Label><strong>{item.question}</strong></Form.Label>
                 <Form.Group>
                   {item.answers.map((ans, j) => (
                     <Form.Check

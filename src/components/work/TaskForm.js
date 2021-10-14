@@ -3,7 +3,6 @@ import firebase from "firebase";
 import { Form, Button, Alert } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// An edit form for creating a new task, to be added to the list
 const TaskForm = (props) => {
   const [error, setError] = useState("");
   const taskRef = useRef();
@@ -40,7 +39,7 @@ const TaskForm = (props) => {
     <Form onSubmit={handleSubmitButton} style={{ textAlign: "left" }}>
       {error && <Alert variant="danger">{error}</Alert>}
       <Form.Group className="mt-5 mb-5" id="todo-form-desc">
-        <Form.Label>Create New Task</Form.Label>
+        <Form.Label><strong>Create New Task</strong></Form.Label>
         <div className="d-flex align-items-center">
           <Form.Control
             className="me-3"

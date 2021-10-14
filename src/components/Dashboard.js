@@ -8,6 +8,7 @@ import Quote from "./home/Quote.js";
 import TaskList from "./work/TaskList.js";
 import { auth } from "../firebase.js";
 import Game from "./game/Game.js";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = () => {
   const [key, setKey] = useState("home");
@@ -42,11 +43,17 @@ const Dashboard = () => {
   return (
     <>
       <section className="w-100">
+        <div className="d-flex justify-content-end mt-3">
+            {error && <Alert variant="danger">{error}</Alert>}
+            <Button variant="link" onClick={handleLogout}>
+            Log Out
+            </Button>
+        </div>
         <Tabs
           style={style1}
           activeKey={key}
           onSelect={(k) => setKey(k)}
-          className="mb-3"
+          className="mt-2 mb-3"
           mountOnEnter={true}
           unmountOnExit={true}
         >
@@ -65,13 +72,6 @@ const Dashboard = () => {
           </Tab>
         </Tabs>
       </section>
-
-      <footer className="w-100 text-center mt-2">
-        {error && <Alert variant="danger">{error}</Alert>}
-        <Button variant="link" onClick={handleLogout}>
-          Log Out
-        </Button>
-      </footer>
     </>
   );
 };

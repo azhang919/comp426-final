@@ -2,6 +2,9 @@ import { useState, useRef } from "react";
 import { Button, Card, Modal, Form, Alert } from "react-bootstrap";
 import { db } from "../../firebase.js";
 import { FiEdit3 } from 'react-icons/fi';
+import { AiOutlineDelete } from 'react-icons/ai';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Task = (props) => {
   const [modal, setModal] = useState(false); // for showing edit form modal
@@ -61,7 +64,7 @@ const Task = (props) => {
   };
 
   return (
-    <div className="todo-item">
+    <div className="mb-5">
       <Card>
         <Card.Body>
           <div className="d-flex align-items-center custom-control custom-checkbox">
@@ -74,11 +77,10 @@ const Task = (props) => {
             />
             <Card.Text>{props.task.text}</Card.Text>
           </div>
-         
         </Card.Body>
-        <Card.Footer>
-          <Button onClick={handleEditButton}><FiEdit3 /></Button>
-          <Button onClick={handleDeleteButton}>DELETE</Button>
+        <Card.Footer className="d-flex justify-content-flex-end">
+          <Button onClick={handleEditButton} className="me-3"><FiEdit3 /></Button>
+          <Button onClick={handleDeleteButton}><AiOutlineDelete /></Button>
         </Card.Footer>
       </Card>
 
@@ -95,8 +97,8 @@ const Task = (props) => {
                 ref={taskRef}
               />
             </Form.Group>
-            <div className="edit-buttons">
-              <Button type="submit" onClick={handleUpdateButton}>
+            <div>
+              <Button type="submit" onClick={handleUpdateButton} className="me-3">
                 UPDATE
               </Button>
               <Button onClick={handleCancelButton}>CANCEL</Button>

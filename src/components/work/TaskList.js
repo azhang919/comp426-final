@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import TaskForm from "./TaskForm.js";
 import Task from "./Task.js";
 import { db } from "../../firebase.js";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const TaskList = (props) => {
   const [items, setItems] = useState([]);
@@ -52,7 +51,7 @@ const TaskList = (props) => {
     <section className="work">
       <TaskForm handleSubmit={addItem} uid={props.uid} />
       {items.map((t, i) => (
-        <Task key={i} task={t} listItems={items} className="mb-3"/>
+        <Task key={i} task={t} listItems={items}/>
       ))}
     </section>
   );
