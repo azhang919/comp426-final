@@ -28,7 +28,7 @@ const Quote = () => {
           style={{ height: "200px" }}
         >
           <Card.Text className="fst-italic">{quote}</Card.Text>
-          <Card.Text className="text-end mt-1">- {author}</Card.Text>
+          <Card.Text className="text-center mt-1">- {author}</Card.Text>
         </div>
         <div className="text-center">
           <Button type="button" className="btn" onClick={getQuote}>

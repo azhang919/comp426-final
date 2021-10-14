@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Weather = () => {
   const [weather, setWeather] = useState({});
-  const [searchMsg, setSearchMsg] = useState("");
 
   useEffect(() => {
     getWeather();
@@ -28,16 +27,14 @@ const Weather = () => {
         desc: result.data.data[0].weather.description,
         icon: result.data.data[0].weather.icon,
       });
-      setSearchMsg("");
     } else {
       setWeather({});
-      setSearchMsg("City weather not found. Please search again.");
     }
   };
 
   return (
     <>
-      <Card className="mb-5">
+      <Card className="mb-3">
         <Card.Body className="text-center justify-content-center">
           <img
             src={`https://www.weatherbit.io/static/img/icons/${weather.icon}.png`}

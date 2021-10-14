@@ -24,22 +24,18 @@ function App() {
                 className="w-100"
                 style={{ width: "100vw"}}
               />
-              <div className="d-flex justify-content-center">
                 <Route
                   path="/signup"
                   component={Signup}
                   className="d-flex w-100"
-                  style={{ maxWidth: "400px" }}
+                  style={{ maxWidth: "400px"}}
                 />
-              </div>
-              <div className="d-flex justify-content-center">
                 <Route
                   path="/login"
                   component={Login}
                   className="d-flex w-100"
-                  style={{ maxWidth: "400px" }}
+                  style={{ maxWidth: "400px"}}
                 />
-              </div>
             </Switch>
           </AuthProvider>
         </Router>

@@ -42,7 +42,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <section className="w-100">
+      <section className="w-100 h-100">
         <div className="d-flex justify-content-end mt-3">
             {error && <Alert variant="danger">{error}</Alert>}
             <Button variant="link" onClick={handleLogout}>

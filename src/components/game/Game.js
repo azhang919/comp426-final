@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import { Card, Button, Form, Modal } from "react-bootstrap";
 import axios from "axios";
 
@@ -28,8 +28,8 @@ const Game = () => {
   };
 
   const decode = (str) => {
-    str = str.replace(/&quot;|&#34;|&ldquo;|&rdquo;/g, `\"`);
-    str = str.replace(/&#039;|&#39;|&lsquo;|&rsquo;/g, `\'`);
+    str = str.replace(/&quot;|&#34;|&ldquo;|&rdquo;/g, `"`);
+    str = str.replace(/&#039;|&#39;|&lsquo;|&rsquo;/g, `'`);
     return str.replace(/&#(\d+);/g, String.fromCharCode(str));
   };
 
