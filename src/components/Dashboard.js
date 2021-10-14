@@ -58,8 +58,8 @@ const Dashboard = () => {
           unmountOnExit={true}
         >
           <Tab eventKey="home" title="Home" style={style2}>
-            {/* <Weather />
-            <Quote /> */}
+            <Weather />
+            <Quote />
           </Tab>
           <Tab eventKey="work" title="Work" style={style2}>
             <TaskList uid={auth.currentUser.uid} />

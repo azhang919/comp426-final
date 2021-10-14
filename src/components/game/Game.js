@@ -41,10 +41,6 @@ const Game = () => {
     return answers;
   };
 
-  // useEffect(() => {
-  //   getQuiz();
-  // }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
