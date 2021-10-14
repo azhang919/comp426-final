@@ -1,6 +1,6 @@
 # COMP 426 Final
 
-View website live here: https://comp-426-final-ff6de.web.app/login
+View website live here: https://comp-426-final-ff6de.web.app/login \
 View demo video (8 min) here: https://youtu.be/RVw4irB0SoM
 
 ## Grading Rubric
